@@ -19,7 +19,7 @@ class WSBBChannel {
 
 
     onOpen(evt) {
-        axios.get('https://boardfinal.herokuapp.com//getticket').then(ticket => {
+        axios.get('https://boardfinal.herokuapp.com/getticket').then(ticket => {
             console.log(ticket.data);
             this.wsocket.send(ticket.data);
         });
