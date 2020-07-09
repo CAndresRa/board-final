@@ -1,7 +1,7 @@
 // Retorna la url del servicio. Es una función de configuración.
 function BBServiceURL() {
     var host = window.location.host;
-    var url = 'ws://' + (host) + '/bbService';
+    var url = 'wss://' + (host) + '/bbService';
     console.log("URL Calculada: " + url);
     return url;
 }
@@ -19,7 +19,7 @@ class WSBBChannel {
 
 
     onOpen(evt) {
-        axios.get('http://localhost:8080/getticket').then(ticket => {
+        axios.get('https://boardfinal.herokuapp.com//getticket').then(ticket => {
             console.log(ticket.data);
             this.wsocket.send(ticket.data);
         });
