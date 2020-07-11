@@ -40,7 +40,7 @@ por ejemplo y dando como resultado observe que subrayado se encuentra la configu
 
 Una vez se ingrese al sitio se encontrara con la siguiente vista.
 
-![Texto alternativo]()
+![Texto alternativo](https://github.com/CAndresRa/board-final/blob/master/imgReadme/Screen%20Shot%202020-07-10%20at%206.28.12%20PM.png)
 
 Para el ingreso existen dos usuarios.
 
