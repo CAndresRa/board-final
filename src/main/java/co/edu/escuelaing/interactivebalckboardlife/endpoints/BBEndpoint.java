@@ -50,13 +50,16 @@ public class BBEndpoint {
     }
 
     @OnMessage
-    public void processPoint(String message, Session session) {
+    public void processPoint(String message, Session session) throws IOException {
         if(accepted){
             logger.log(Level.INFO, "Point received:" + message + ". From session: " + session);
             this.send(message);
         } else{
             if(!accepted && ticketRepository.checkTicket(message)){
                 accepted = true;
+            }
+            else{
+                ownSession.close();
             }
         }
 

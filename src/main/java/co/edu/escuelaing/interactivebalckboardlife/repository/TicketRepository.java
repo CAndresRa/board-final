@@ -17,12 +17,19 @@ public class TicketRepository {
         return _instance;
     }
 
+    /**
+     * @return obtain ticket to validate session
+     */
     public synchronized Integer getTicket(){
         Integer a = ticketNumber++;
         listTickets.add(a.toString());
         return a;
     }
 
+    /**
+     * @param ticket possible valid ticket
+     * @return if is valid the ticket or not
+     */
     public boolean checkTicket(String ticket){
         boolean isValid = listTickets.remove(ticket);
         return isValid;
